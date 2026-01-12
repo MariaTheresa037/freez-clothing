@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freez Clothing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .product button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #111;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .form-box {
+      background: #fff;
+      padding: 20px;
+      max-width: 400px;
+      margin: 30px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    .form-box button {
+      width: 100%;
+      padding: 10px;
+      background: #111;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      margin-top: 40px;
+    }
+
+    /* INTENTIONALLY BROKEN MOBILE STYLES */
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+      .container {
+        width: 900px; /* forces horizontal overflow */
+      }
+      .products {
+        display: block; /* breaks grid */
+      }
+      .product {
+        width: 600px; /* oversized cards */
+        margin-bottom: -40px; /* overlap products */
+      }
+      .form-box {
+        width: 700px; /* breaks form layout */
+        position: relative;
+        top: -80px; /* overlaps content */
+      }
+      .form-box input {
+        width: 120%; /* input goes outside box */
+      }
+      .form-box button {
+        position: absolute;
+        top: 40px; /* overlaps inputs */
+        left: 50px;
+      }
+      nav a {
+        display: inline-block;
+        margin: 20px; /* messy nav */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Freez Clothing</h1>
+    <p>Style that keeps you cool 😎</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section style="position: relative;">
+    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3b13" alt="Winter Fashion Girl" style="width:100%; height:70vh; object-fit:cover;">
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.5); color:#fff; padding:20px 30px; border-radius:10px; text-align:center;">
+      <h2>Winter Collection 2026</h2>
+      <p>Stay Warm. Stay Stylish.</p>
+    </div>
+  </section>
+
+  <marquee behavior="scroll" direction="left">
+    🔥 Flat 50% OFF on Winter Collection | 🚚 Free Shipping on orders above ₹999 | 👕 New Arrivals Every Week 🔥
+  </marquee>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#register">Register</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container" id="products">
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=T-Shirt" alt="T-Shirt">
+        <h3>Cool T‑Shirt</h3>
+        <p>₹799</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Hoodie" alt="Hoodie">
+        <h3>Freez Hoodie</h3>
+        <p>₹1499</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Jacket" alt="Jacket">
+        <h3>Winter Jacket</h3>
+        <p>₹2499</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <marquee behavior="alternate" direction="right">
+    ❄️ Freez Clothing Ads: Be Bold. Be Cool. Be Freez. ❄️
+  </marquee>
+
+  <div class="form-box" id="register">
+    <h2>Register</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2026 Freez Clothing. All rights reserved by maria.</p>
+  </footer>
+
+</body>
+</html>
